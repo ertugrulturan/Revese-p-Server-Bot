@@ -10,16 +10,16 @@
 </form>
 <br>
 <?php
-$_POST["wsite"]);
-$_POST["reverse"]);
+$_POST["site"];
+$_POST["reverse"];
 
-if(empty($_POST["wsite"])) {
+if(empty($_POST["site"])) {
 exit;
 }
 
 
 error_reporting(E_ALL);
-$ch = curl_init("https://viewdns.info/reverseip/?host=".$_POST["wsite"]."&t=1");
+$ch = curl_init("https://viewdns.info/reverseip/?host=".$_POST["site"]."&t=1");
 curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.79 Safari/537.36");
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_VERBOSE, 1);
